@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "npx rollup --config"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.10.0"
+  },
+  "dependencies": {
+    "collect.js": "^4.36.1"
+  }
+}
