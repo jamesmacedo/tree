@@ -12,23 +12,6 @@
       position:relative;
     }
 
-    .buttons-sections{
-      height:50px;
-      position:absolute;
-      top:20px;
-      right:20px;
-      display:flex;
-      gap:10px;
-    }
-
-    .buttons-sections .button{
-      background-color:green;
-      padding:5px 20px 5px 20px;
-      border:none;
-      color:white;
-      border-radius:5px;
-    }
-
     .node{ 
       height:50px;
   
@@ -42,4 +25,10 @@
       position:absolute;
       cursor:move;
       user-select: none;
+    }
+    .delete_button{
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background-color:red;
     }

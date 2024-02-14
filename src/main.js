@@ -1,18 +1,23 @@
 import Canva from './libs/canva.js';
-import Node from './libs/node.js';
 
     var canva = new Canva();
 
     canva.draw();
 
-    var node = new Node({name:'testando'});
+    var nodes = [
+      {
+        name:'teste1',
+      },
+      {
+        name:'teste2',
+      },
+      {
+        name:'teste3'
+      }
+    ]
 
-    canva.addNode(node.draw());  
-    canva.addNode(node.draw());  
-    canva.addNode(node.draw());  
-
+    canva.addNodes(nodes);
 
 export default {
-  Canva,
-  Node
+  Canva
 };

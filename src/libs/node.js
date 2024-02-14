@@ -42,9 +42,20 @@ export default class Node{
             if(collided !== null && !hasLine(node,collided)){
               addLine(node,collided);
             }
-            node.onmouseup = null;
+            node.onmouseup = null;var id = `node_${helpers.randomStr()}`; 
           };
         } 
+        this.element = node;
+
+
+        var delete_button = document.createElement('button');
+        delete_button.className = 'delete_button';
+        delete_button.onclick = () =>{
+          node.remove();
+          updateLines();
+        };
+        node.appendChild(delete_button);
+
         return node;
       }
 

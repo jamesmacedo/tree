@@ -48,9 +48,13 @@ const addLine = (div1,div2) =>{
 
 
 const updateLines = () =>{
-  lines.forEach(line => {
-    let be = bezier(line.div1,line.div2);
-    document.getElementById(line.id).setAttribute('d', `M${be.x1},${be.y1} Q${be.controlX},${be.controlY} ${be.x2},${be.y2}`);
+  lines.forEach((line,key) => { 
+    if(!document.body.contains(line.div1) || !document.body.contains(line.div2)){
+      lines.splice(key,1); 
+      document.getElementById(line.id).remove();
+    }else{
+      document.getElementById(line.id).setAttribute('d', `M${be.x1},${be.y1} Q${be.controlX},${be.controlY} ${be.x2},${be.y2}`);
+    }    
   });
 }
 

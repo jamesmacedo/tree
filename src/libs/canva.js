@@ -1,6 +1,10 @@
+import Node from '../libs/node.js';
+
 export default class Canva {
 
-      constructor(){}
+      constructor(){
+        this.nodes = [];
+      }
       
       setupSvg(){
         let svg = document.createElementNS("http://www.w3.org/2000/svg","svg"); 
@@ -20,8 +24,12 @@ export default class Canva {
         return svg;
       }
 
-      addNode(node){
-        this.canva.appendChild(node);
+      addNodes(no){ 
+        no.forEach((node_obj)=>{
+          let node = new Node(node_obj);
+          this.canva.appendChild(node.draw()); 
+          this.nodes.push(node);
+        })
       }
 
       draw(id){
