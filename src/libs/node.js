@@ -51,7 +51,8 @@ export default class Node{
         var delete_button = document.createElement('button');
         delete_button.className = 'delete_button';
         delete_button.onclick = () =>{
-          node.remove();
+          node.remove();  
+          updateLines();
           updateLines();
         };
         node.appendChild(delete_button);

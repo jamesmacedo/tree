@@ -53,6 +53,7 @@ const updateLines = () =>{
       lines.splice(key,1); 
       document.getElementById(line.id).remove();
     }else{
+      let be = bezier(line.div1,line.div2);
       document.getElementById(line.id).setAttribute('d', `M${be.x1},${be.y1} Q${be.controlX},${be.controlY} ${be.x2},${be.y2}`);
     }    
   });

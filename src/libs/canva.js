@@ -24,6 +24,16 @@ export default class Canva {
         return svg;
       }
 
+      addNode(no){
+        
+        let node = new Node(no);
+        
+        this.canva.appendChild(node.draw());
+        this.nodes.push(node);
+
+        console.log(node);
+      }
+
       addNodes(no){ 
         no.forEach((node_obj)=>{
           let node = new Node(node_obj);
